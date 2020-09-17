@@ -13,7 +13,8 @@ const forecast = (latitude, longitude, callback) => {
         } else {
             callback(undefined, body.current.weather_descriptions[0]+ ' throughout the day. '+ 
             'It is currently ' + body.current.temperature + 'C degrees out, but if feels like ' +
-            body.current.feelslike);
+            body.current.feelslike + '. Humidity is currently: ' + body.current.humidity + '\n' +
+            'There are ' + body.current.precip + '% chance for precipitations.');
         }
     })
 };
